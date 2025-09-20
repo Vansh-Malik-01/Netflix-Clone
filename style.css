@@ -28,10 +28,6 @@ body {
 
 a {
     color: var(--text-gray);
-    text-decoration: none;
-}
-
-a:hover {
     text-decoration: underline;
 }
 
