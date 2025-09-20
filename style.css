@@ -89,6 +89,16 @@ margin-left: 15px;
     color: var(--text-white);
 }
 
+.btn-end{
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
 .language-select {
     background: rgba(24, 24, 24, 0.4);
     border: 1px solid var(--border-gray-lang);
@@ -115,7 +125,6 @@ margin-left: 15px;
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    border-bottom: 8px solid #222;
 }
 
 .hero-content {
@@ -168,15 +177,21 @@ margin-left: 15px;
     gap: 0.5rem;
 }
 
+/* main section coding */
+main{
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: black;
+}
+
 /* Trending Section */
 .trending-section {
     padding: 4rem 0;
-    border-bottom: 8px solid #222;
 }
 
 .section-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 500;
     margin-bottom: 1.5rem;
     padding: 0 3.5rem;
 }
@@ -208,7 +223,6 @@ margin-left: 15px;
 /* Features Section */
 .features-section {
     padding: 4rem 0;
-    border-bottom: 8px solid #222;
 }
 
 .features-grid {
@@ -218,47 +232,38 @@ margin-left: 15px;
     padding: 0 3.5rem;
 }
 
-.feature-card {
-    background: radial-gradient(circle, rgba(30,0,40,1) 0%, rgba(10,0,15,1) 100%); /* Dark purple gradient */
-    padding: 2.5rem 2rem; /* Increased padding */
-    border-radius: 0.75rem; /* Slightly larger radius */
+.card{
+    height: 360px;
+    width: 100%;
+    border-radius: 16px;
+    background: linear-gradient(to bottom right, #192145, #210E17);
     position: relative;
-    min-height: 320px; /* Increased height */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to top */
-    overflow: hidden; /* Hide SVG overflow */
 }
-
-.feature-card h3 {
-    font-size: 1.75rem; /* Increased font size */
-    font-weight: 700;
-    margin-bottom: 1rem;
+.card_heading{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
-.feature-card p {
-    font-size: 1.15rem; /* Slightly increased font size */
+.card_para{
     color: var(--text-gray);
-    line-height: 1.5;
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
-.feature-icon {
+.card_icon{
     position: absolute;
-    bottom: -10px; /* Adjust position */
-    right: -5px;   /* Adjust position */
-    transform: scale(1); /* Reset scale, size is in SVG now */
-    z-index: 0;
-}
-
-.feature-card h3, .feature-card p {
-    position: relative;
-    z-index: 1;
+    bottom: 20px;
+    right: 10px;
 }
 
 /* FAQ Section */
 .faq-section {
-    padding: 4rem 0;
-    border-bottom: 8px solid #222;
+    padding:  0;
     text-align: center;
 }
 
@@ -268,8 +273,8 @@ margin-left: 15px;
 
 .faq-list {
     list-style: none;
-    max-width: 815px;
-    margin: 2rem auto 3rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
     text-align: left;
 }
 
@@ -278,7 +283,7 @@ margin-left: 15px;
     background: #303030;
     border: none;
     color: var(--text-white);
-    padding: 1.5rem;
+    padding: 1.4rem;
     font-size: 1.5rem;
     text-align: left;
     cursor: pointer;
@@ -305,6 +310,18 @@ margin-left: 15px;
 .footer {
     padding: 4rem 0 2rem;
     color: var(--text-gray);
+    background-color: var(--background-dark);
+}
+
+.footer-email{
+    width: 100%;
+    max-width: 580px;
+    padding: 1rem;
+    font-size: 1rem;
+    background: rgba(22, 22, 22, 0.7);
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    border-radius: 0.25rem;
+    color: var(--text-white);
 }
 
 .footer .container {
