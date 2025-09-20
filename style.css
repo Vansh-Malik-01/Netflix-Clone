@@ -196,13 +196,20 @@ main{
     padding: 0 3.5rem;
 }
 
+.trending-container {
+    position: relative;
+}
+
 .trending-grid {
     display: flex;
+    align-items: center;
     overflow-x: auto;
-    padding: 0 3.5rem 1rem;
-    gap: 1rem;
+    margin: 0 50px;
+    padding: 0px 40px;
+    gap: 40px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    border: 1px solid red;
 }
 
 .trending-grid::-webkit-scrollbar {
@@ -213,11 +220,65 @@ main{
     flex: 0 0 auto;
     width: 200px;
     position: relative;
+    border: 1px solid green;
 }
 
 .trending-card img {
     width: 100%;
-    border-radius: 0.25rem;
+    border-radius: 10px;  
+}
+
+.card-number {
+    position: absolute;
+    font-size: 100px;
+    font-weight: 900;
+    color: black;
+    bottom: 5px;
+    left: -20px;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    z-index: 1;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: chartreuse;
+    color: var(--text-white);
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    height: 120px;
+    width: 24px;
+    border-radius: 5px;
+}
+.s_btn{
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 310px;
+    width: 30px;
+    z-index: 10;
+    background-color: var(--background-dark);
+}
+.s_end_btn{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 310px;
+    width: 30px;
+    z-index: 10;
+    background-color: var(--background-dark);
+}
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
 }
 
 /* Features Section */
@@ -240,7 +301,7 @@ main{
     position: relative;
 }
 .card_heading{
-    color: white;
+    color: var(--text-white);
     font-size: 26px;
     font-weight: 600;
     padding-top: 30px;
