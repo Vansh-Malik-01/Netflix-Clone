@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --primary-red: #E50914;
     --primary-dark: #141414;
@@ -6,6 +7,7 @@
     --background-dark: #000000;
     --card-dark: #1A1A1A;
     --border-gray: #303030;
+    --border-gray-lang: #474747;
 }
 
 * {
@@ -15,11 +17,13 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: var(--background-dark);
     color: var(--text-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.9) 60%, rgba(0, 0, 0, 0.9) 100%), url('netflix-bg.webp');
+    background-size: contain;
 }
 
 a {
@@ -37,38 +41,51 @@ a:hover {
     padding: 0 2rem;
 }
 
-/* Header */
-.header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem 3.5rem;
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    padding: 25px 150px;
 }
 
-.logo {
-    height: 2.5rem;
-    width: auto;
-    fill: var(--primary-red);
+.netflix_icon{
+    width: 148px;
+    height: 40px;
+    color: var(--primary-red);
+    fill:currentColor;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 10px;
 }
-
+.language_icon_box{
+position: relative;
+margin-left: 15px;
+}
+.language_icon{
+    position: absolute;
+    top: 25%;
+    left: 9px;
+}
 .btn {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 700;
     border-radius: 0.25rem;
     cursor: pointer;
     border: none;
     padding: 0.5rem 1rem;
+    height: 35px;
+}
+.btn-sub {
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    height: 60px;
 }
 
 .btn-primary {
@@ -77,17 +94,24 @@ a:hover {
 }
 
 .language-select {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid var(--border-gray);
+    background: rgba(24, 24, 24, 0.4);
+    border: 1px solid var(--border-gray-lang);
     color: var(--text-white);
-    padding: 0.5rem 1rem;
+    width: 120px;
+    padding-top: 8px;
+    padding-bottom: 7px;
     border-radius: 0.25rem;
+    font-size: 15px;
+    font-weight: bold;
+}
+.lang{
+    text-align: center;
+    margin-left: 20px;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.9) 100%), url('https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_large.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -99,25 +123,27 @@ a:hover {
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 60px;
     font-weight: 900;
     margin-bottom: 1rem;
+    line-height: 1.2;
+    
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 1.5rem;
+    font-size: 20px;
 }
 
 .hero-cta-text {
-    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    font-size: 16px;
 }
 
 .email-form {
@@ -191,26 +217,46 @@ a:hover {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; /* Reduced gap slightly */
     padding: 0 3.5rem;
 }
 
 .feature-card {
-    background: var(--card-dark);
-    padding: 2rem;
-    border-radius: 0.5rem;
+    background: radial-gradient(circle, rgba(30,0,40,1) 0%, rgba(10,0,15,1) 100%); /* Dark purple gradient */
+    padding: 2.5rem 2rem; /* Increased padding */
+    border-radius: 0.75rem; /* Slightly larger radius */
+    position: relative;
+    min-height: 320px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+    overflow: hidden; /* Hide SVG overflow */
 }
 
 .feature-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem; /* Increased font size */
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .feature-card p {
-    font-size: 1.1rem;
+    font-size: 1.15rem; /* Slightly increased font size */
     color: var(--text-gray);
+    line-height: 1.5;
+}
+
+.feature-icon {
+    position: absolute;
+    bottom: -10px; /* Adjust position */
+    right: -5px;   /* Adjust position */
+    transform: scale(1); /* Reset scale, size is in SVG now */
+    z-index: 0;
+}
+
+.feature-card h3, .feature-card p {
+    position: relative;
+    z-index: 1;
 }
 
 /* FAQ Section */
