@@ -182,17 +182,34 @@ main{
     padding-left: 80px;
     padding-right: 80px;
     background-color: black;
+    border-radius: 50% / 80px 80px 0 0;
 }
+.main_cover{
+    height: 120px;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.484); */
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    border-radius: 50% 50% 0 0;
+}
+
+.line_section{
+    position: relative;
+    bottom: 50px;
+}
+
 
 /* Trending Section */
 
 .main-trading-line{
-    height: 80px;
+    height: 120px;
     width: 100%;
     background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
     position: absolute;
     left: 0;
-    border: 1px solid red;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
 }
 .main_line{
     height: 120px;
