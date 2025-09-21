@@ -185,6 +185,21 @@ main{
 }
 
 /* Trending Section */
+
+.main-trading-line{
+    height: 80px;
+    width: 100%;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    position: absolute;
+    left: 0;
+    border: 1px solid red;
+}
+.main_line{
+    height: 120px;
+    width: 100%;
+    border-top: 4px solid red;
+    border-radius: 50% 50% 0 0;
+}
 .trending-section {
     padding: 4rem 0 2rem;
 }
