@@ -186,7 +186,7 @@ main{
 
 /* Trending Section */
 .trending-section {
-    padding: 4rem 0;
+    padding: 4rem 0 2rem;
 }
 
 .section-title {
@@ -209,7 +209,6 @@ main{
     gap: 40px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    border: 1px solid red;
 }
 
 .trending-grid::-webkit-scrollbar {
@@ -220,7 +219,14 @@ main{
     flex: 0 0 auto;
     width: 200px;
     position: relative;
-    border: 1px solid green;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.trending-card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    cursor: pointer;
 }
 
 .trending-card img {
@@ -243,8 +249,7 @@ main{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    background-color: chartreuse;
+    background-color: rgba(49, 49, 49, 0.5);
     color: var(--text-white);
     border: none;
     cursor: pointer;
@@ -257,21 +262,32 @@ main{
     position: absolute;
     left: 40px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(0);
     height: 310px;
     width: 30px;
     z-index: 10;
     background-color: var(--background-dark);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+.s_btn.hidden {
+    transform: translateY(-50%) translateX(-100%);
+    opacity: 0;
+}
+
 .s_end_btn{
     position: absolute;
     right: 40px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(0);
     height: 310px;
     width: 30px;
     z-index: 10;
     background-color: var(--background-dark);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.s_end_btn.hidden {
+    transform: translateY(-50%) translateX(100%);
+    opacity: 0;
 }
 .prev-btn {
     left: 0;
@@ -283,7 +299,7 @@ main{
 
 /* Features Section */
 .features-section {
-    padding: 4rem 0;
+    padding: 2rem 0 4rem;
 }
 
 .features-grid {
