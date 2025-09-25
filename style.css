@@ -526,7 +526,7 @@ main {
   color: var(--text-gray);
 }
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 1105px) {
   .netflix_icon {
     width: 88px;
     height: 30px;
@@ -560,7 +560,8 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
   .trending-section {
-    max-width: 860px;
+    max-width: 845px;
+    padding-bottom: 15;
   }
   main {
     padding-left: 0px;
@@ -573,7 +574,7 @@ main {
   .trending-grid {
     height: 174px;
     gap: 20px;
-    margin: 0 30px;
+    margin: 0 10px;
     padding: 0px 20px;
   }
   .trending-card {
@@ -594,11 +595,15 @@ main {
   }
   .s_btn {
     height: 170px;
-    left: 20px;
+    left: 9px;
   }
   .s_end_btn {
     height: 170px;
-    right: 20px;
+    right: 9px;
+  }
+  .features-section .section-title{
+    font-size: 18px;
+    padding: 0 33px;
   }
 }
 
