@@ -280,7 +280,7 @@ main {
   overflow-x: auto;
   margin: 0 50px;
   padding: 0px 40px;
-  height: 320px;
+  height: 285px;
   gap: 40px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -292,10 +292,14 @@ main {
 
 .trending-card {
   flex: 0 0 auto;
-  width: 200px;
+  width: 180px;
+  height: 252px;
   position: relative;
   transition: transform 0.3s ease;
   cursor: pointer;
+}
+.trending-card img{
+  height: 250px;
 }
 
 .trending-card:hover {
