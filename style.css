@@ -280,6 +280,7 @@ main {
   overflow-x: auto;
   margin: 0 50px;
   padding: 0px 40px;
+  height: 320px;
   gap: 40px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
