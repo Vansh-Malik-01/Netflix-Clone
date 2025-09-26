@@ -110,6 +110,15 @@ a {
   border-radius: 0.25rem;
   font-size: 15px;
   font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 16px;
+  padding-left: 30px;
+  text-align-last: left;
 }
 .lang {
   text-align: center;
@@ -662,11 +671,23 @@ main {
     height: 1.5rem;
   }
   .btn {
-    padding: 1px;
+    padding: 0 1rem;
     font-size: 0.9rem;
   }
-  .header-right {
-    gap: 1rem;
+  .language-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 0;
+    color: var(--text-white);
+    width: 60px;
+    color: transparent;
+  }
+  .language_icon{
+    left: 11px;
+  }
+  .language-select .lang {
+    color: var(--text-white);
   }
   .hero {
     background-image: linear-gradient(
