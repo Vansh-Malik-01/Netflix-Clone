@@ -8,7 +8,7 @@ This project is a visually identical and fully responsive clone of the Netflix h
 
 ## 🎥 Live Demo
 
-[Link to Live Demo] 
+**Live Demo:** [Netflix Clone](https://n-flix-clone-ui.netlify.app/)
 
 ## 📸 Screenshot
 
